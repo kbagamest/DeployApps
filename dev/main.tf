@@ -25,7 +25,7 @@ data "aws_iam_role" "eks_admin" {
 module "cluster" {
   source = "git::https://github.com/camptocamp/devops-stack.git//modules/eks/aws?ref=v0.39.0"
 
-  cluster_name                         = "my-cluster"
+  cluster_name                         = "my-ncluster"
   vpc_id                               = data.aws_vpc.this.id
 
   worker_groups = [
